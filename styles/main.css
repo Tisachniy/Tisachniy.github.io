@@ -1,0 +1,12 @@
+.button__animation{
+
+    margin-top: 20px;
+
+}
+
+.button__animation:hover{
+    transform: scale(1.1);
+    transition: all 0.2s linear 0s;
+    box-shadow: 0 10px 20px rgba(2, 129, 255, 0.7);
+}
+
