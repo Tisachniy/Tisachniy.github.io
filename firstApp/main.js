@@ -42,7 +42,7 @@ function addPastedToTable() {
     var userScore = $("#checkScore");
     var table = $("#tableBody");
     if (userName[0].value.length != 0 && userId[0].value.length != 0 && userScore[0].value.length != 0  ) {
-    $(table).append( "<tr><td scope='row'>"+userName[0].value+"</td><td>"+userId[0].value+"</td><td>"+userScore[0].value+ "</td></tr>" );
+    $(table).append( "<tr><td scope='row'>"+userName[0].value+"</td><td id='VariableId' >"+userId[0].value+"</td><td>"+userScore[0].value+ "</td></tr>" );
 
     }
     // else if (userName[0].value.length != 0) {
