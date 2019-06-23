@@ -38,11 +38,16 @@ for (var key in mas){
 function addPastedToTable() {
     
     var userName = $("#checkName");
-    var userId = $("#checkId");
+    // var userId = $("#checkId");
     var userScore = $("#checkScore");
     var table = $("#tableBody");
-    if (userName[0].value.length != 0 && userId[0].value.length != 0 && userScore[0].value.length != 0  ) {
-    $(table).append( "<tr><td scope='row'>"+userName[0].value+"</td><td class='VariableId' >"+userId[0].value+"</td><td>"+userScore[0].value+ "</td></tr>" );
+    var newId = $(".VariableId");
+    console.log(newId.length);
+    newId = newId.length + 1;
+    console.log(newId);
+    // delete in if userId[0].value.length != 0 && 
+    if (userName[0].value.length != 0 && userScore[0].value.length != 0  ) {
+    $(table).append( "<tr><td scope='row'>"+userName[0].value+"</td><td class='VariableId' >"+newId+"</td><td>"+userScore[0].value+ "</td></tr>" );
 
     }
     // else if (userName[0].value.length != 0) {
