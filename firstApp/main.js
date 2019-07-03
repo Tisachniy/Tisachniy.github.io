@@ -72,3 +72,4 @@ function addPastedToTable() {
 // TODO 5. Add database synchronization and work with it
 
 
+// TODO 6. LogIn system... Before create db.
