@@ -22,10 +22,18 @@ function validate(){
         }
         
     }else{
-        var validationForm = document.getElementsByClassName("form-group")[0];
-        $(validationForm).prepend("<h2 id='validError'>Invalid Login or Password</h2>");
-        validationError = true;
-        return validationError;
+        // if(validationError){
+        //     $("#validError").hide();
+        // }
+        // var validationForm = document.getElementsByClassName("form-group")[0];
+        // $(validationForm).prepend("<h2 id='validError'>Invalid Login or Password</h2>");
+        // validationError = true;
+        // return validationError;
+        Swal.fire(
+            'Oops',
+            'Invalid Login or Password',
+            'error'
+          );
     }
 
 }
