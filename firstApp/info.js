@@ -4,15 +4,15 @@ $( document ).ready(function() {
 
 function addInfo(){
 var info = "";
-$.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
+$.getJSON('https://ipapi.co/json/', function(data) {
   console.log(JSON.stringify(data, null, 2));
   info = data;
-  var ip = info.geoplugin_request;
-  var country = info.geoplugin_countryName;
-  var city = info.geoplugin_city;
-  var timeZone = info.geoplugin_timezone;
-  var latitdue = info.geoplugin_latitude;
-  var longitude = info.geoplugin_longitude;
+  var ip = info.ip;
+  var country = info.country_name;
+  var city = info.city;
+  var timeZone = info.timezone;
+  var latitdue = info.latitude;
+  var longitude = info.longitude;
   //return info
   $("#ip")[0].textContent = " " + ip;
   $("#country")[0].textContent = " " + country;
