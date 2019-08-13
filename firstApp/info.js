@@ -14,7 +14,7 @@ $.getJSON('https://ipapi.co/json/', function(data) {
   var latitdue = info.latitude;
   var longitude = info.longitude;
   var provider = info.org;
-  var countrycode = info.info.country_calling_code;
+  var countrycode = info.country_calling_code;
 
   //return info
   $("#ip")[0].textContent = " " + ip;
