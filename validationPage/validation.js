@@ -59,3 +59,9 @@ inputSecond.addEventListener("keyup", function(event) {
     document.getElementById("validateBtn").click();
   }
 });
+
+
+
+
+
+

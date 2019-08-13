@@ -31,6 +31,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/index/map.html" tabindex="-1" aria-disabled="true">Map <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index/music.html" tabindex="-1" aria-disabled="true">Music <span class="sr-only">(current)</span></a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -43,16 +46,25 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            Tisachniy web app
+            Your info
         </div>
         <div class="card-body">
-            <h4 class="card-title">Tested site</h4>
-            <p class="card-text">This is just a test web app, where i using : <br> 
-            1: JS;<br>
+            <p class="card-text">Your IP:<span id="ip">ip</span> 
+            <!-- 1: JS;<br>
             2: HTML+CSS; <br>
             3: Mongo DB ++; <br>
-            4: Next step is angular; <br>
+            4: Next step is angular; <br> -->
+
+
         </p>
+        <p class="card-text">Your country:<span id="country"></span></p>
+        <p class="card-text">Your city:<span id="city"></span></p>
+        <p class="card-text">Your time zone:<span id="timezone"></span></p>
+        <p class="card-text">Your latitude:<span id="latitude"></span></p>
+        <p class="card-text">Your longitude:<span id="longitude"></span></p>
+        
+        
+
         </div>
         <div class="card-footer text-muted">
             
@@ -67,7 +79,7 @@
 
  
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>   
- <script src="/secondApp/main.js"></script>
+ <script src="/firstApp/info.js"></script>
 
 </body>
 </html>
