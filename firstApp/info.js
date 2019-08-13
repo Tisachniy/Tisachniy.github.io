@@ -13,6 +13,9 @@ $.getJSON('https://ipapi.co/json/', function(data) {
   var timeZone = info.timezone;
   var latitdue = info.latitude;
   var longitude = info.longitude;
+  var provider = info.org;
+  var countrycode = info.info.country_calling_code;
+
   //return info
   $("#ip")[0].textContent = " " + ip;
   $("#country")[0].textContent = " " + country;
@@ -20,6 +23,8 @@ $.getJSON('https://ipapi.co/json/', function(data) {
   $("#timezone")[0].textContent = " " + timeZone;
   $("#latitude")[0].textContent = " " + latitdue;
   $("#longitude")[0].textContent = " " +longitude;
+  $("#provider")[0].textContent = " " + provider;
+  $("#countryCode")[0].textContent = " " + countrycode;
 
 });
 }
