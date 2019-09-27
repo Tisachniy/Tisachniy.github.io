@@ -1,6 +1,19 @@
+var ip;
+var access_key = '169083a424e366842cddbe3009ea001d';
+
 $( document ).ready(function() {
-    addInfo();
+  $(function() {
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+      function(json) {
+        ip = json.ip;
+        console.log(ip);
+      }
+    );
+  });
+    //addInfo();
 });
+
+
 
 function addInfo(){
 var info = "";
