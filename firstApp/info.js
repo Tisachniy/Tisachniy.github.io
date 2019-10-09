@@ -18,15 +18,14 @@ $( document ).ready(function() {
 var ip;
 function getIp(){
   $(function() {
-    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
-      function(json) {
-        ip = json.ip;
-        console.log(ip);
-        return ip;
-      }
-    );
     $.ajax({
-      url: 'https://api.ipfind.com/?ip=+ip+&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1',
+      url: "https://api.ipify.org?format=jsonp&callback=?",
+      success: function(data){
+        ip = json.ip;
+      }
+    });
+    $.ajax({
+      url: 'https://api.ipfind.com/?ip='+ip+'&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1',
       success: function(data){
         console.log(data);
       }
