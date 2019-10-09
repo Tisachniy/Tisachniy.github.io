@@ -1,6 +1,7 @@
 
 //var access_key = '96c8bea0-25b5-4ebd-a162-3d65cf6430e1';  
 $( document ).ready(function() {
+  var ip;
   getIp();
   // addInfo();
 });
@@ -15,7 +16,6 @@ $( document ).ready(function() {
 //   }
 // });
 
-var ip;
 function getIp(){
   $(function() {
     $.ajax({
@@ -24,8 +24,10 @@ function getIp(){
         ip = json.ip;
       }
     });
+    console.log(ip);
+    // TODO 1 find how make 2 AJAX Request in 1 call...
     $.ajax({
-      url: 'https://api.ipfind.com/?ip='+ip+'&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1',
+      url: "https://api.ipfind.com/?ip="+ip+"&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1",
       success: function(data){
         console.log(data);
       }
