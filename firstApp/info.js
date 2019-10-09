@@ -2,7 +2,7 @@
 //var access_key = '96c8bea0-25b5-4ebd-a162-3d65cf6430e1';  
 $( document ).ready(function() {
   getIp();
-  addInfo();
+  // addInfo();
 });
 
 // $.ajax({
@@ -25,17 +25,18 @@ function getIp(){
         return ip;
       }
     );
+    $.ajax({
+      url: `https://api.ipfind.com/?ip=${ip}&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1`,
+      success: function(data){
+        console.log(data);
+      }
+    });
   });
 }
 
 function addInfo(){
-var info = "";
-$.ajax({
-  url: `https://api.ipfind.com/?ip=${ip}&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1`,
-  success: function(data){
-    console.log(data);
-  }
-});
+
+
 // $("#flag").attr("src", "https://api.ipfind.com/flag?ip="+ip+"&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1");
 // $.getJSON('https://ipfind.com/?ip='+ip+'&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1', function(data) {
 //   console.log(JSON.stringify(data, null, 2));
