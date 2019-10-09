@@ -2,6 +2,7 @@
 //var access_key = '96c8bea0-25b5-4ebd-a162-3d65cf6430e1';  
 $( document ).ready(function() {
   getIp();
+  addInfo();
 });
 
 // $.ajax({
@@ -14,17 +15,14 @@ $( document ).ready(function() {
 //   }
 // });
 
-
+var ip;
 function getIp(){
   $(function() {
     $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
       function(json) {
-        var ip;
         ip = json.ip;
         console.log(ip);
         return ip;
-        addInfo();
-        
       }
     );
   });
