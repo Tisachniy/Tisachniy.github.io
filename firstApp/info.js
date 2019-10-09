@@ -26,7 +26,7 @@ function getIp(){
       }
     );
     $.ajax({
-      url: `https://api.ipfind.com/?ip=${ip}&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1`,
+      url: 'https://api.ipfind.com/?ip=+ip+&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1',
       success: function(data){
         console.log(data);
       }
