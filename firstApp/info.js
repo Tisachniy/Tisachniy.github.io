@@ -3,7 +3,7 @@
 $( document ).ready(function() {
   
   getIp();
-  // addInfo();
+  addInfo();
 });
 
 // $.ajax({
@@ -15,29 +15,25 @@ $( document ).ready(function() {
 //     console.log(response);
 //   }
 // });
-
+var ipRest;
 function getIp(){
-  $(function() {
-    var ipRest;
     $.ajax({
       url: "https://api.ipify.org",
       success: function(data){
+        console.log("succes way");
         ipRest = data;
       }
     });
-    console.log(ip);
+    console.log(ipRest);
     // TODO 1 find how make 2 AJAX Request in 1 call...
-    $.ajax({
-      url: "https://api.ipfind.com/?ip="+ip+"&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1",
-      success: function(data){
-        console.log(data);
-      }
-    });
-  });
-}
-
+  };
 function addInfo(){
-
+  $.ajax({
+    url: "https://api.ipfind.com/?ip="+ipRest+"&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1",
+    success: function(data){
+      console.log(data);
+    }
+  });
 
 // $("#flag").attr("src", "https://api.ipfind.com/flag?ip="+ip+"&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1");
 // $.getJSON('https://ipfind.com/?ip='+ip+'&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1', function(data) {
