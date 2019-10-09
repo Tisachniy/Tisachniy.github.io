@@ -24,6 +24,8 @@ function getIp(){
       function(json) {
         ip = json.ip;
         console.log(ip);
+        return ip;
+        
       }
     );
   });
