@@ -19,9 +19,10 @@ $( document ).ready(function() {
 function getIp(){
   $(function() {
     $.ajax({
-      url: "https://api.ipify.org?format=jsonp&callback=?",
+      url: "https://api.ipify.org",
       success: function(data){
-        ip = json.ip;
+        ip = data;
+		    return ip;
       }
     });
     console.log(ip);
