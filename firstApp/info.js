@@ -15,6 +15,7 @@ $( document ).ready(function() {
 //   }
 // });
 var ipRest;
+var userInfo;
 function getIp(){
     $.ajax({
       url: "https://api.ipify.org",
@@ -26,6 +27,20 @@ function getIp(){
           url: "https://api.ipfind.com/?ip="+ipRest+"&auth=96c8bea0-25b5-4ebd-a162-3d65cf6430e1",
           success: function(data){
             console.log(data);
+            userInfo = data;
+            var ip = userInfo.ip_address;
+            var country = userInfo.country;
+            var city = userInfo.city;
+            var timeZone = userInfo.timezone;
+            var latitdue = userInfo.latitude;
+            var longitude = userInfo.longitude;
+
+              $("#ip")[0].textContent = " " + ip;
+              $("#country")[0].textContent = " " + country;
+              $("#city")[0].textContent = " " + city;
+              $("#timezone")[0].textContent = " " + timeZone;
+              $("#latitude")[0].textContent = " " + latitdue;
+              $("#longitude")[0].textContent = " " +longitude;
           }
         });
       }
@@ -49,14 +64,7 @@ function getIp(){
 //   var countrycode;
 
 //   //return info
-//   $("#ip")[0].textContent = " " + ip;
-//   $("#country")[0].textContent = " " + country;
-//   $("#city")[0].textContent = " " + city;
-//   $("#timezone")[0].textContent = " " + timeZone;
-//   $("#latitude")[0].textContent = " " + latitdue;
-//   $("#longitude")[0].textContent = " " +longitude;
-//   $("#provider")[0].textContent = " " + provider;
-//   $("#countryCode")[0].textContent = " " + countrycode;
+
 //   
 
 
