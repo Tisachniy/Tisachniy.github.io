@@ -1,7 +1,7 @@
 
 //var access_key = '96c8bea0-25b5-4ebd-a162-3d65cf6430e1';  
 $( document ).ready(function() {
-  var ip;
+  
   getIp();
   // addInfo();
 });
@@ -18,11 +18,11 @@ $( document ).ready(function() {
 
 function getIp(){
   $(function() {
+    var ipRest;
     $.ajax({
       url: "https://api.ipify.org",
       success: function(data){
-        ip = data;
-		    return ip;
+        ipRest = data;
       }
     });
     console.log(ip);
