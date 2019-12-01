@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import Navbar from '../navbar';
 import MainPage from '../mainPage';
+import ItemAddForm from '../item-add-form';
 import Footer from '../footer';
 
 export default class app extends Component {
 
+  maxId = 100;
+
     state = {
         navBarData: [
-          { label: 'Main', id: 1 },
-          { label: 'Info', id: 2 },
-          { label: 'ToDo', id: 3 },
-          { label: '...', id: 4}
+          { label: 'Main', id: 1 }
+         
         ],
         user:[
           {label: 'Alex', id:5, score:"5"},
@@ -37,6 +38,29 @@ export default class app extends Component {
         });
       };
 
+      addItem = (text, score) => {
+        const newItem = {
+          label: text,
+          score: score,
+          id: this.maxId++
+        };
+
+        this.setState(({user}) => {
+
+          const newArr = [
+            ...user,
+            newItem
+          ];
+
+          return{
+            user:newArr
+          };
+        })
+
+      };
+
+
+
 
 
     render(){
@@ -47,6 +71,8 @@ export default class app extends Component {
                 <MainPage
                 userInfo={this.state.user}
                 onDeleted={ this.deleteItem}/>
+                <ItemAddForm
+                onItemAdded={this.addItem}/>
                 <Footer/>
             </div>
         );

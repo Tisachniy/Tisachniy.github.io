@@ -27,13 +27,7 @@ const MainPage = ({userInfo, onDeleted}) => {
          
          
         </table>
-        <button 
-            type="button" 
-            className="btn btn-outline-primary">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-                <span>     </span>
-                <i class="fa fa-user" aria-hidden="true"></i>
-            </button>
+        
         </div>
     
     )
