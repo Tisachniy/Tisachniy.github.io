@@ -16,7 +16,8 @@ export default class app extends Component {
         user:[
           {label: 'Alex', id:5, score:"5"},
           {label: 'Mark', id:6, score:"3"},
-          {label: 'Both', id:7, score:"4"}
+          {label: 'Both', id:7, score:"4"},
+          {label: 'Test', id:3, score:"5"}
         ]
       };
 

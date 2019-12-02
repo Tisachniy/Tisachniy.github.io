@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <span className="text-muted">Developed and further updated by Nikita Tysiachnyi.    
         <a className="github__link text-secondary" 
-        href="https://github.com/Tisachniy">
+        href="https://github.com/Tysiachnyi">
             GitHub
             <span>  </span>
             <i className="fa fa-github" aria-hidden="true"/></a>
