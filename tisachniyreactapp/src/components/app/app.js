@@ -60,6 +60,10 @@ export default class app extends Component {
 
       };
 
+      editItem = (id) => {
+        alert("ok we test " + id)
+      }
+
     
 
 
@@ -73,7 +77,8 @@ export default class app extends Component {
                 navbarTitle={this.state.navBarData}/>
                 <MainPage
                 userInfo={this.state.user}
-                onDeleted={ this.deleteItem}/>
+                onDeleted={ this.deleteItem}
+                onEdit={this.editItem}/>
                 <ItemAddForm
                 onItemAdded={this.addItem}/>
                 <Footer/>

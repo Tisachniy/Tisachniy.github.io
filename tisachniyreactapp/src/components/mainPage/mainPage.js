@@ -1,14 +1,16 @@
 import React from 'react';
 import MainPageItems from '../mainPage-item'
 
-const MainPage = ({userInfo, onDeleted}) => {
+const MainPage = ({userInfo, onDeleted, onEdit}) => {
     const elements = userInfo.map((item) => {
         return(
             <tbody key={item.id} id="tableBody">
             <MainPageItems label={item.label}
              id={item.id} 
              score={item.score} 
-             onDeleted={() => onDeleted(item.id)}/>
+             onDeleted={() => onDeleted(item.id)}
+             onEdit={() => onEdit(item.id)}/>
+             
             </tbody>
         )
     })
